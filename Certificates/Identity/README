@@ -1,0 +1,13 @@
+How to generate a APNS certificate for customer
+===============================================
+
+step 1: You must create a MDM certificate for the vendor from The Apple Certificate Portal.
+step 2: Do the following steps to generate a APNS plist file.
+          1: using make_identity script to create a directory where contains a CSR which will be signed with MDM certificate of the vendor.
+          2: using sign_identity script to sign the CSR create in previous step.
+
+step 3: Upload the plist_encoded file to https://identity.apple.com/pushcert and download the certificate with the format of XXXXX.pem
+
+
+Note: Don't focus on the ca and vendor directories.
+

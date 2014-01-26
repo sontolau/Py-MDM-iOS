@@ -1,0 +1,35 @@
+<html>
+<style type="text/css">
+    body {text-align:center;}
+</style>
+<head>
+<title> The MDM of iOS Enrollment Page </title>
+</head>
+
+<body >
+<script>
+    function checkInput(user,passwd) {
+        if (user.trim().length == 0 ||
+            passwd.trim().length == 0) {
+            alert ("The length of username must not be zero.");
+        } else {
+           auth_form.submit();
+        }
+    }
+</script>
+<p>
+    <h1>The MDM portal of Aotain's Inc</h1>
+</p>
+<form action="/enrollment" method="post" id="auth_form">
+    <p>
+        Username:<input type="text" maxlength="20" name="username" />
+    </p>
+    <p>
+        Password:<input type="password" maxlength="20" name="password" />
+    </p>
+    <p>
+        <button type="button" width="20" onclick="checkInput(username.value, password.value)">Enroll</button>
+    </p>
+</form>
+</body>
+</html>
